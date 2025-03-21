@@ -1,9 +1,10 @@
-from fastapi.testclient import TestClient
-from main import app  
+from fastapi.testclient import TestClient 
 import sys, os
 
-root_dir = os.path.join(os.path.dirname(__file__), "..")
+root_dir = os.path.join(os.path.dirname(__file__), '..')
 sys.path.append(root_dir)
+
+from main import app 
 
 # Create a test client
 client = TestClient(app)
